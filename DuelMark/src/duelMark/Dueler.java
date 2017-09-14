@@ -1,6 +1,6 @@
-package duel;
+package duelMark;
 
-import duel.Dueler;
+import duelMark.Dueler;
 
 public interface Dueler {
 
