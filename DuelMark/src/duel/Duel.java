@@ -1,4 +1,4 @@
-package duelMark;
+package duel;
 
 import duel.CharacterA;
 import duel.CharacterB;
