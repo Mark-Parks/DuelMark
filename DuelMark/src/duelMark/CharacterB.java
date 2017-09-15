@@ -8,10 +8,6 @@ public class CharacterB implements Dueler
 	public String getName(String name){
 		return name;
 	}
-	public String getName() {
-		// TODO Auto-generated method stub
-		return null;
-	}
 	@Override
 	public void setStartingHP(int hp) {
 		// TODO Auto-generated method stub

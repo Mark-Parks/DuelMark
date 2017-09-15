@@ -1,6 +1,6 @@
 package duelMark;
 
-public class CharacterA 
+public class CharacterA implements Dueler
 {
 	public void taunt(){};
 	public String getName() {};
