@@ -1,4 +1,4 @@
-package duel;
+package duelMark;
 
 public class CharacterB implements Dueler
 {
