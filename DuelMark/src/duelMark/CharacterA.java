@@ -3,7 +3,9 @@ package duelMark;
 public class CharacterA implements Dueler
 {
 	public void taunt(){};
-	public String getName() {}
+	public String getName() {
+		return null;
+	}
 	@Override
 	public void setStartingHP(int hp) {
 		// TODO Auto-generated method stub
