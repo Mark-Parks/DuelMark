@@ -24,7 +24,7 @@ public class CharacterB implements Dueler
 	}
 	public void hit(Object caller) {
 		if (caller instanceof Duel) {
-			caller.this.hp -= 10;
+			this.hp -= 10;
 		}
 	}
 }
