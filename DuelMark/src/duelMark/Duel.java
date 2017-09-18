@@ -1,4 +1,4 @@
-package duelMark;
+package duel;
 
 //period 4
 
@@ -24,6 +24,7 @@ public class Duel {
 	private int dueler2HP = 100;
 	private boolean d1Loaded;
 	private boolean d2Loaded;
+	
 	
 	
 	public static void main(String[] args){
@@ -187,4 +188,3 @@ public class Duel {
 	}
 
 }
-
