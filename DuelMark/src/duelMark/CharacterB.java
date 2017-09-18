@@ -2,35 +2,29 @@ package duelMark;
 
 public class CharacterB implements Dueler
 {
+	private int hp;
+	
 	public void taunt(){
-		System.out.println();
+		System.out.println("It's high noon...");
 	}
 	public String getName(){
-		return "name";
+		return "Jesse McCree";
 	}
-	@Override
 	public void setStartingHP(int hp) {
-		// TODO Auto-generated method stub
-		
+		this.hp = hp;
 	}
-	@Override
 	public int getHP() {
-		// TODO Auto-generated method stub
-		return 0;
+		return hp;
 	}
-	@Override
 	public boolean determineIfOpponentIsFair(Dueler d, int hp) {
-		// TODO Auto-generated method stub
-		return false;
+		return (d.hp > hp);
 	}
-	@Override
 	public int getAction(Object caller) {
-		// TODO Auto-generated method stub
 		return 0;
 	}
-	@Override
 	public void hit(Object caller) {
-		// TODO Auto-generated method stub
-		
+		if (caller instanceof Duel) {
+			caller.this.hp -= 10;
+		}
 	}
 }

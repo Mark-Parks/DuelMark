@@ -26,7 +26,6 @@ public class Duel {
 	private boolean d2Loaded;
 	
 	
-	
 	public static void main(String[] args){
 		Duel duel = new Duel();
 		duel.dukeItOut();
