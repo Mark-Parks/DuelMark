@@ -4,7 +4,6 @@ public class CharacterA implements Dueler
 {
 	private int hp;
 	private boolean loaded;
-	private Dueler.d2
 	private String taunts[] = {"You suck for than a lolipop!","Get on outta here!"};
 	
 	public CharacterA() {
