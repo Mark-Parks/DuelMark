@@ -1,34 +1,34 @@
 package duelMark;
 
-public class CharacterA implements Dueler
+public class CharacterB implements Dueler
 {
-	public void taunt(){};
-	public String getName() {
-		return null;
+	private int hp;
+	
+	public void taunt(){
+		System.out.println("It's high noon...");
 	}
-	@Override
+	public String getName(){
+		return "Jesse McCree";
+	}
 	public void setStartingHP(int hp) {
-		// TODO Auto-generated method stub
-		
+		this.hp = hp;
 	}
-	@Override
 	public int getHP() {
-		// TODO Auto-generated method stub
-		return 0;
+		return hp;
 	}
-	@Override
 	public boolean determineIfOpponentIsFair(Dueler d, int hp) {
-		// TODO Auto-generated method stub
-		return false;
+		return (d.hp > hp);
 	}
-	@Override
 	public int getAction(Object caller) {
-		// TODO Auto-generated method stub
+		//return the action chosen for this round
+		//Object is the object calling this method. Use it to verify your opponent is not trying to gain the upperhand by figuring out what you are doing.
+		//no idea how to do this
 		return 0;
 	}
-	@Override
 	public void hit(Object caller) {
-		// TODO Auto-generated method stub
-		
+		//likely wrong
+		if (caller instanceof Duel) {
+			this.hp -= 10;
+		}
 	}
 }
