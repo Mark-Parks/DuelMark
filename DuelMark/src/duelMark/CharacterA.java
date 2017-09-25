@@ -1,11 +1,21 @@
 package duelMark;
 
-public class CharacterB implements Dueler
+public class CharacterA implements Dueler
 {
 	private int hp;
+	private boolean loaded;
+	private Dueler.d2
+	private String taunts[] = {"You suck for than a lolipop!","Get on outta here!"};
+	
+	public CharacterA() {
+		loaded = false;
+	}
 	
 	public void taunt(){
-		System.out.println("It's high noon...");
+		if(Math.random() > .5)
+			System.out.println(taunts[0]);
+		else
+			System.out.println(taunts[1]);
 	}
 	public String getName(){
 		return "Jesse McCree";
@@ -17,16 +27,28 @@ public class CharacterB implements Dueler
 		return hp;
 	}
 	public boolean determineIfOpponentIsFair(Dueler d, int hp) {
-		return (d.hp > hp);
+		return (d.getHP() > hp);
 	}
 	public int getAction(Object caller) {
-		//return the action chosen for this round
-		//Object is the object calling this method. Use it to verify your opponent is not trying to gain the upperhand by figuring out what you are doing.
-		//no idea how to do this
-		return 0;
+		
+		if( caller instanceof Duel) {
+			
+			if(loaded == false) {
+				if(Math.random() > 0.5) {
+					return Duel.GUARDING;
+				}else {
+					return Duel.LOADING;
+				}
+			}else {
+				if(Math.random() > 0.5) {
+					return Duel.GUARDING;
+				}else {
+					return Duel.SHOOTING;
+				}
+			}
+		}
 	}
 	public void hit(Object caller) {
-		//likely wrong
 		if (caller instanceof Duel) {
 			this.hp -= 10;
 		}
