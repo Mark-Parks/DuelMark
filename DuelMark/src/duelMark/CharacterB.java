@@ -53,7 +53,7 @@ public class CharacterB implements Dueler
 				return duel.GUARDING;
 			}
 		}
-		return 3;
+		return Duel.YEAH_RIGHT;
 	}
 	public void hit(Object caller) {
 		//likely wrong
