@@ -4,7 +4,7 @@ public class CharacterA implements Dueler
 {
 	private int hp;
 	private boolean loaded;
-	private String taunts[] = {"You suck for than a lolipop!","Get on outta here!"};
+	private String taunts[] = {"You suck more than a lolipop!","Get on outta here!"};
 	
 	public CharacterA() {
 		loaded = false;
@@ -17,7 +17,7 @@ public class CharacterA implements Dueler
 			System.out.println(taunts[1]);
 	}
 	public String getName(){
-		return "Jesse McCree";
+		return "Clint Eastwood";
 	}
 	public void setStartingHP(int hp) {
 		this.hp = hp;
@@ -26,7 +26,7 @@ public class CharacterA implements Dueler
 		return hp;
 	}
 	public boolean determineIfOpponentIsFair(Dueler d, int hp) {
-		return (d.getHP() > hp);
+		return (d.getHP() == hp);
 	}
 	public int getAction(Object caller) {
 		
@@ -36,12 +36,14 @@ public class CharacterA implements Dueler
 				if(Math.random() > 0.5) {
 					return Duel.GUARDING;
 				}else {
+					loaded = true;
 					return Duel.LOADING;
 				}
 			}else {
 				if(Math.random() > 0.5) {
 					return Duel.GUARDING;
 				}else {
+					loaded = false;
 					return Duel.SHOOTING;
 				}
 			}
