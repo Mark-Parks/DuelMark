@@ -46,6 +46,7 @@ public class CharacterA implements Dueler
 				}
 			}
 		}
+		return Duel.YEAH_RIGHT;
 	}
 	public void hit(Object caller) {
 		if (caller instanceof Duel) {
